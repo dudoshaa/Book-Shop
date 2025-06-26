@@ -122,7 +122,7 @@ function App() {
     },
     {
       id: 11,
-      title: "The Catcher in the Rye",
+      title: "Catcher ",
       author: "J.D. Salinger",
       year: 1951,
       image: Image11,
