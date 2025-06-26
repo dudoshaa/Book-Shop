@@ -216,7 +216,7 @@ function App() {
   );
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <header className="bg-orange-900">
         <div className="align-elements mb-7 flex items-center ">
           <div className="navbar-start">
@@ -230,7 +230,7 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="mb-12">
+      <main className="mb-12 grow">
         <h2 className="align-elements text-4xl font-bold text-yellow-600 mb-8">
           Historical Books
         </h2>
@@ -247,7 +247,7 @@ function App() {
         )}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
