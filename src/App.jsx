@@ -217,7 +217,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-orange-900">
+      <header className="bg-orange-900 mb-10">
         <div className="align-elements mb-7 flex items-center ">
           <div className="navbar-start">
             <img src={Logo} alt="" width={100} />
