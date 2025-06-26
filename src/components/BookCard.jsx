@@ -4,9 +4,9 @@ import Button from "./Button.jsx";
 import formatNumber from "./FormatNUmber.jsx";
 function BookCard({ book }) {
   return (
-    <li key={book.id} className="flex flex-col items-center ">
+    <li key={book.id} className="flex flex-col items-center hover:shadow-orange-900 shadow-2xl transition-all">
       <img
-        className="rounded-2xl shadow-2xl w-[200px] h-[300px]"
+        className="rounded-2xl  w-[200px] h-[300px]"
         src={book.image}
         alt={book.title}
       />
