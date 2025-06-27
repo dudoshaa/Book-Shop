@@ -27,6 +27,8 @@ import Image19 from "./assets/donquixote.jpg";
 import Image20 from "./assets/gray.jpg";
 import Logo from "./assets/logo.png";
 
+import { FaRegFaceSadTear } from "react-icons/fa6";
+
 function App() {
   const [query, setQuery] = useState("");
   const [books, setBooks] = useState([
@@ -216,7 +218,7 @@ function App() {
   );
   const deleteBook = (id) => {
     const deleteBooks = books.filter((book) => {
-    return book.id !== id;
+      return book.id !== id;
     });
     setBooks(deleteBooks);
   };
@@ -238,17 +240,17 @@ function App() {
       </header>
       <main className="mb-12 grow">
         <h2 className="align-elements text-4xl font-bold text-yellow-600 mb-8">
-          Historical Books
+          Historical Books ({books.length})
         </h2>
         {filteredBooks.length > 0 ? (
-          <ul className="align-elements grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          <ul className="align-elements grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
             {filteredBooks.map((book) => (
               <BookCard key={book.id} book={book} deleteBook={deleteBook} />
             ))}
           </ul>
         ) : (
-          <p className="align-elements text-orange-900  text-center text-2xl opacity-70">
-            No books found matching your search:(
+          <p className="align-elements text-orange-900  text-center text-5xl opacity-70 p-64 ">
+            No books found matching your search :(
           </p>
         )}
       </main>
