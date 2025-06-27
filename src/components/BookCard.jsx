@@ -1,10 +1,10 @@
-import Button from "./Button.jsx";
-
-
 import formatNumber from "./FormatNUmber.jsx";
-function BookCard({ book }) {
+function BookCard({ book, deleteBook }) {
   return (
-    <li key={book.id} className="flex flex-col items-center hover:shadow-orange-900 shadow-2xl transition-all">
+    <li
+      key={book.id}
+      className="flex flex-col items-center hover:shadow-orange-900 shadow-2xl transition-all"
+    >
       <img
         className="rounded-2xl  w-[200px] h-[300px]"
         src={book.image}
@@ -19,7 +19,14 @@ function BookCard({ book }) {
         <p>{formatNumber(book.price)}</p>
         <p>⭐{book.rating}</p>
       </div>
-      <Button />
+      <button
+        onClick={() => {
+          deleteBook(book.id);
+        }}
+        className="btn hover:bg-orange-900 hover:text-white w-[200px] flex"
+      >
+        Delete
+      </button>
     </li>
   );
 }

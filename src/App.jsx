@@ -214,6 +214,12 @@ function App() {
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
+  const deleteBook = (id) => {
+    const deleteBooks = books.filter((book) => {
+    return book.id !== id;
+    });
+    setBooks(deleteBooks);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -237,7 +243,7 @@ function App() {
         {filteredBooks.length > 0 ? (
           <ul className="align-elements grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {filteredBooks.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <BookCard key={book.id} book={book} deleteBook={deleteBook} />
             ))}
           </ul>
         ) : (
