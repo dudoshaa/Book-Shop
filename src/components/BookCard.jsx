@@ -5,7 +5,6 @@ import { AiFillDelete } from "react-icons/ai";
 import { HiOutlinePlusCircle, HiOutlineMinusCircle } from "react-icons/hi";
 import { IoMdHeart } from "react-icons/io";
 
-
 function BookCard({ book, deleteBook }) {
   const [count, setCount] = useState(0);
   const [like, setLike] = useState(false);
@@ -13,11 +12,11 @@ function BookCard({ book, deleteBook }) {
   return (
     <li
       key={book.id}
-      className="flex flex-col items-center hover:shadow-orange-900 shadow-2xl transition-all rounded-2xl"
+      className="flex flex-col items-center hover:shadow-orange-900 shadow-2xl transition-all rounded-2xl hover:scale-110 "
     >
       <div className="relative">
         <img
-          className="rounded-2xl  w-[250px] h-[350px] "
+          className="rounded-2xl  w-[250px] h-[350px]  "
           src={book.image}
           alt={book.title}
         />
